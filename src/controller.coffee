@@ -81,7 +81,7 @@ class Controller
   # @param data [Array] The data
   renderView: (data) ->
     searchKey = this.getOpt("searchKey")
-    data = this.callbacks("sorter").call(this, @query.text, data[0..1000] , searchKey)
+    data = this.callbacks("sorter").call(this, @query.text, data[0..2000] , searchKey)
     @view.render data[0...this.getOpt('limit')]
 
   @arrayToDefaultHash: (data) ->
@@ -92,7 +92,7 @@ class Controller
   # Searching!
   lookUp: (e) ->
     return if e && e.type == 'click' && !@getOpt('lookUpOnClick')
-    return if @getOpt('suspendOnComposing') and @app.isComposing 
+    return if @getOpt('suspendOnComposing') and @app.isComposing
     query = @catchQuery e
     if not query
       @expectedQueryCBId = null
