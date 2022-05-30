@@ -1,0 +1,23 @@
+name: atjs-checks
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  main:
+    name: node_js
+    runs-on: [self-hosted, zendesk-stable]
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 12
+      - name: test
+        run: |
+          npm install -g gulp
+          npm install -g bower
+          bower install
+          npm test
