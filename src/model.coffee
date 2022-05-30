@@ -15,7 +15,7 @@ class Model
   # fetch data from storage by query.
   # will invoke `callback` to return data
   #
-  # @param query [String] catched string for searching
+  # @param query [String] cached string for searching
   # @param callback [Function] for receiving data
   query: (query, callback) ->
     data = this.fetch()

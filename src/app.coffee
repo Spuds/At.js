@@ -1,4 +1,4 @@
-# At.js central contoller(searching, matching, evaluating and rendering.)
+# At.js central controller(searching, matching, evaluating and rendering.)
 class App
 
   # @param inputor [HTML DOM Object] `input` or `textarea`

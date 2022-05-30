@@ -50,7 +50,7 @@ class EditableController extends Controller
 
     # absorb range
     # The range at the end of an element is not inside in firefox but not others browsers including IE.
-    # To normolize them, we have to move the range inside the element while deleting content or moving caret right after .atwho-inserted
+    # To normalize them, we have to move the range inside the element while deleting content or moving caret right after .atwho-inserted
     if /firefox/i.test(navigator.userAgent)
       if $(range.startContainer).is @$inputor
         @_clearRange()
