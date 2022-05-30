@@ -8,3 +8,4 @@ components
 .grunt
 *.log
 build/
+package-lock.json
