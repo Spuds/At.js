@@ -5,13 +5,16 @@
 **Two** space indent
 
 ### Modifying the code
+
 First, ensure that you have the latest [Node.js](http://nodejs.org/) and [npm](http://npmjs.org/) installed.
 
 Test that gulp is installed globally by running `grunt -v` at the command-line.  If gulp isn't installed globally, run `npm install -g gulp` to install the latest version.
 
 * Fork and clone the repo.
 * Run `npm install` and `bower install` to install all dev dependencies (including grunt).
-* Modify the `*.coffee` file.
+  - If you get errors, due to git, try `git config --global url."https://github.com".insteadOf git://github.com`
+  - If you get `npm ERR! code EINTEGRITY` try `npm cache verify`
+* Modify the `*.coffee` files.
 * Run `gulp` to build this project.
 
 Assuming that you don't see any red, you're ready to go. Just be sure to run `gulp` after making any changes, to ensure that nothing is broken.
@@ -26,12 +29,12 @@ Assuming that you don't see any red, you're ready to go. Just be sure to run `gu
 1. Update the documentation to reflect any changes.
 1. Push to your fork and submit a pull request.
 
-### notes
+### Notes
 
-Please don't edit files in the `dist` subdirectory and *.js files in `src` as they are generated via gulp.  
+Please don't edit files in the `dist` subdirectory and *.js files in `src` as they are generated via gulp / Coffee.  
 You'll find source code in the `src` subdirectory!  
 use `bower install` or `component install` to install dependencies first.
 
-
 ### PhantomJS
+
 While gulp can run the included unit tests via [PhantomJS](http://phantomjs.org/), this shouldn't be considered a substitute for the real thing. Please be sure to test the `_SpecRunner.html` unit test file(s) in _actual_ browsers.
