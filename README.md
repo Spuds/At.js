@@ -4,7 +4,7 @@
 #### Help / Build
 
 At.js now **depends on** [Caret.js](https://github.com/ichord/Caret.js).  
-Please read [**CHANGELOG.md**](CHANGELOG.md) for more details if you are going to update to new version.
+Please read [**CONTRIBUTING.md**](CONTRIBUTING.md) for details on how to make code edits and setup your own enviroment.
 
 ### Documentation
 https://github.com/ichord/At.js/wiki
@@ -51,4 +51,3 @@ $('#inputor').atwho({
     data:['Peter', 'Tom', 'Anne']
 })
 ```
-
