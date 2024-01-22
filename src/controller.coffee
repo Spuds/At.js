@@ -80,8 +80,9 @@ class Controller
   #
   # @param data [Array] The data
   renderView: (data) ->
+    return data if typeof data is 'function'
     searchKey = this.getOpt("searchKey")
-    data = this.callbacks("sorter").call(this, @query.text, data[0..2000] , searchKey)
+    data = this.callbacks("sorter").call(this, @query.text, data[0..2001] , searchKey)
     @view.render data[0...this.getOpt('limit')]
 
   @arrayToDefaultHash: (data) ->

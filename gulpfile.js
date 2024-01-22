@@ -48,7 +48,7 @@ gulp.task('umd', function (done) {
 
 gulp.task('bump', function (done) {
     gulp.src(['bower.json', 'component.json', 'package.json'])
-        .pipe(bump({version: "1.5.5"}))
+        .pipe(bump({version: "1.5.6"}))
         .pipe(gulp.dest('./'));
 
     done();
